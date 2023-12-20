@@ -2,3 +2,13 @@ body {
     margin: 0;
     font-family: 'Raleway', 'sans-serif';
 }
+
+.button {
+    cursor: pointer;
+}
+
+.recipe-img {
+    height: 30rem;
+    width: 100%;
+    
+}
