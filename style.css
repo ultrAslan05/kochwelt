@@ -22,7 +22,8 @@ body {
 
 .important-recipe-data {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
+    gap: 24px;
     width: 300px;
     padding-bottom: 32px;
     padding-top: 16px;
@@ -32,7 +33,9 @@ body {
     background-color: #EFEFEF;
     padding: 4px 8px;
     border-radius: 8px;
-    display: flex;
+    white-space: nowrap;
+    display: flex ;
+    align-items: center;
 }
 
 .icons {
@@ -79,3 +82,34 @@ tr:nth-child(odd) {
     border-radius: 8px;
 }
 
+
+/* preparation section*/
+
+.preparation-quick-info {
+    display: flex;
+    justify-content: flex-start;
+    gap: 24px;
+}
+
+.preparation-info {
+    padding: 8px 16px;
+}
+
+.recipe-description {
+    padding: 32px 0;
+}
+
+
+/* created by section */
+
+.recipe-created-by {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 32px;
+}
+
+.profile-img {
+    width: 56px;
+    border-radius: 50%;
+}
