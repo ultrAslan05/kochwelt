@@ -25,7 +25,6 @@ body {
     width: 300px;
     padding-bottom: 32px;
     padding-top: 16px;
-    border-bottom: 1 px solid ;
 }
 
 .recipe-info {
@@ -38,4 +37,28 @@ body {
 .icons {
     width: 16px;
     padding-right: 8px;
+}
+
+.recipe-ingredients {
+    border-top: 1px solid;
+    border-top-color: rgba(0, 0, 0, 0.1);
+}
+
+.form{
+    padding-top: 16px;
+    padding-bottom: 8px;
+}
+
+.portions-input {
+    height: 32px;
+    border-radius: 4px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    padding-left: 8px;
+}
+
+.submit-button {
+    background-color: #008000;
+    color: white;
+    padding: 8px 32px;
+    border: none;
 }

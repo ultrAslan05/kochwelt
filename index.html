@@ -18,27 +18,26 @@
             </div>
             <div class="important-recipe-data">
                 <div class="recipe-info">
-                    <img class="icons" src="./icons/clock-regular.svg" alt="clock">
+                    <img class="icons" src="./icons/clock-regular.svg" alt="clock" />
                     <span>30 Min.</span>
                 </div>
                 <div class="recipe-info">
-                    <img class="icons" src="./icons/brain-solid.svg" alt="">
+                    <img class="icons" src="./icons/brain-solid.svg" alt="" />
                     <span>normal</span>
                 </div>
                 <div class="recipe-info">
-                    <img class="icons" src="./icons/calendar-alt-regular.svg" alt="">
+                    <img class="icons" src="./icons/calendar-alt-regular.svg" alt="" />
                     <span>20.12.2023</span>
                 </div>
             </div>
-            <div class="recipe ingredients">
-                <div>
-                    <form>
-                        <label for="amount">Zutaten für</label>
-                        <input type="number" required id="amount" min="1" value="4" />
-                        <input class="button" type="submit" value="Portionen" id="amount" />
-                    </form>
-                </div>
-                <table>
+            <div class="recipe-ingredients">
+                <form class="form">
+                    <label for="amount">Zutaten für</label>
+                    <input class="portions-input" type="number" required id="amount" min="1" value="4" />
+                    <input class="button submit-button" type="submit" value="Portionen" id="amount" />
+                </form>
+
+                <table class="single-ingredient">
                     <tbody>
                         <tr>
                             <td>500g</td>
@@ -115,7 +114,7 @@
                 <div>
                     <h3>Rezept erstellt von</h3>
                     <div>
-                        <img src="./img/profile.png" alt="Profile Picture">
+                        <img src="./img/profile.png" alt="Profile Picture" />
                         <span>Oumout</span>
                     </div>
                 </div>
