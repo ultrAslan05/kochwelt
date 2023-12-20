@@ -1,6 +1,7 @@
 body {
     margin: 0;
     font-family: 'Raleway', 'sans-serif';
+    background-color: #FFFFFF;
 
 }
 
@@ -62,3 +63,19 @@ body {
     padding: 8px 32px;
     border: none;
 }
+
+/* ingredients table */
+
+tr:nth-child(odd) {
+    background-color: #EFEFEF;
+}
+
+.single-ingredient {
+    width: 100%;
+}
+
+.single-ingredient td {
+    padding: 16px 32px;
+    border-radius: 8px;
+}
+
