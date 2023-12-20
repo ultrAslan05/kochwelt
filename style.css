@@ -1,14 +1,41 @@
 body {
     margin: 0;
     font-family: 'Raleway', 'sans-serif';
+
 }
 
 .button {
     cursor: pointer;
 }
 
+.recipe-container {
+    margin: 0 150px;
+}
+
 .recipe-img {
-    height: 30rem;
+    height: 200px;
     width: 100%;
-    
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.important-recipe-data {
+    display: flex;
+    justify-content: space-between;
+    width: 300px;
+    padding-bottom: 32px;
+    padding-top: 16px;
+    border-bottom: 1 px solid ;
+}
+
+.recipe-info {
+    background-color: #EFEFEF;
+    padding: 4px 8px;
+    border-radius: 8px;
+    display: flex;
+}
+
+.icons {
+    width: 16px;
+    padding-right: 8px;
 }
