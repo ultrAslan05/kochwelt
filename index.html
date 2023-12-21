@@ -8,10 +8,11 @@
         <link rel="stylesheet" href="style.css" />
         <script src="script.js"></script>
     </head>
-    <body>
+    <body onload="includeHTML()">
+        <div w3-include-html="templates/header.html"></div>
         <div class="recipe-container">
             <div>
-                <h1>Kokosmakronen</h1>
+                <h1>Lahmacun</h1>
             </div>
             <div>
                 <img class="recipe-img" src="./img/lahmacun.jpg" alt="Lahmacun" />
@@ -103,7 +104,7 @@
                     jeweils ein Backblech ca. 10 - 20 Min. backen. Der Teig sollte wie Pizzateig aussehen. Die fertig gebackenen Fladen aus dem Ofen nehmen und belegen. Dafür
                     Eisbergsalat, Schafskäse, Zwiebeln, Tomaten klein schneiden und auf dem gebackenen Fladen verteilen.
                 </div>
-                <div>
+                <div class="created-by-section">
                     <h4>Rezept erstellt von</h4>
                     <div class="recipe-created-by">
                         <img class="profile-img" src="./img/profile.png" alt="Profile Picture" />

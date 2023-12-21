@@ -102,6 +102,10 @@ tr:nth-child(odd) {
 
 /* created by section */
 
+.created-by-section {
+    padding-bottom: 64px;
+}
+
 .recipe-created-by {
     display: flex;
     justify-content: flex-start;
@@ -112,4 +116,31 @@ tr:nth-child(odd) {
 .profile-img {
     width: 56px;
     border-radius: 50%;
+}
+
+
+/* header template */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 150px;
+    /* border-bottom: 2px solid rgba(0, 0, 0, 0.1); */
+    box-shadow: 0 4px 8px #ebebeb;
+}
+
+.header a {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.header a:hover {
+    color: #008000;
+}
+
+.nav {
+    display: flex;
+    align-items: flex-end;
+    gap: 16px;
+    padding-bottom: 8px;
 }
