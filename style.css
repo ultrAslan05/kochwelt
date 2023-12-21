@@ -152,3 +152,10 @@ tr:nth-child(odd) {
     align-items: flex-end;
     gap: 16px;
 }
+
+/* footer template */
+
+.footer {
+    height: 20vh;
+    background-color: #403B3B;
+}
