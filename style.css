@@ -118,10 +118,10 @@ tr:nth-child(odd) {
 /* responsive */
 @media(max-width: 1050px){
 
-    /* .header a {
+    .nav-links {
         overflow: hidden;
         white-space: nowrap;
-    } */
+    }
     .header {
         padding: 0;
         justify-content: center !important;
@@ -173,7 +173,7 @@ tr:nth-child(odd) {
     padding-bottom: 8px;
 }
 
-.header a:hover {
+.nav-links:hover {
     color: #008000;
     font-weight: bold;
     border-bottom: 5px solid #008000;
