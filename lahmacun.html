@@ -8,7 +8,7 @@
         <link rel="stylesheet" href="style.css" />
         <script src="script.js"></script>
     </head>
-    <body onload="includeHTML(), calculator('lahmacunIngredients')">
+    <body onload="includeHTML(), showIngredients('lahmacunIngredients')">
         <div w3-include-html="templates/header.html"></div>
         <div class="recipe-container">
             <div>
@@ -32,14 +32,16 @@
                 </div>
             </div>
             <div class="recipe-ingredients">
-                <form class="form" onsubmit="calculator('lahmacunIngredients'); return false">
+                <form class="form" onsubmit="showIngredients('lahmacunIngredients'); return false">
                     <label for="amount">Zutaten für</label>
                     <input class="portions-input" type="number" required id="amount" min="1" value="4" id="amount" />
                     <input class="button submit-button" type="submit" value="Portionen" />
                 </form>
 
-                <table class="single-ingredient" id="ingredient-table">
+                <table class="single-ingredient" >
+                    <tbody id="ingredient-table">
 
+                    </tbody>
                 </table>
                 <h3>Zubereitung</h3>
                 <div class="preparation-quick-info">

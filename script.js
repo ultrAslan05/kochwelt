@@ -6,11 +6,11 @@ let recipes = {
     lahmacunIngredients: {
         ingredient: ["Mehl", "Trockenhefe", "Olivenöl", "Zucker", "Salz", "Wasser", "Hackfleisch", "Zwiebel", "Tomatenmark", "Petersilie", "Knoblauch", "Tomaten", "Pfeffer"],
         amount: ["125", "0.25", "0.25", "0.25", "0.25", "0.25", "125", "0.5", "0.25", "0.5", "1", "0.5", "0.25"],
-        unit: ["g", " Packung", " EL", " TL", " TL", " Tasse", "g", " ganze", " EL", " Bund", " Zehe/n", "", " TL"],
+        unit: ["g", "Packung", " EL", "TL", "TL", "Tasse", "g", "ganze", "EL", "Bund", "Zehe/n", "", "TL"],
     },
 };
 
-function calculator(recipe) {
+function showIngredients(recipe) {
     let ingredientData = recipes[recipe];
     let portion = document.getElementById("ingredient-table");
     let portionSize = document.getElementById("amount").value;
@@ -18,22 +18,18 @@ function calculator(recipe) {
 
     for (let i = 0; i < ingredientData["ingredient"].length; i++) {
         const ingredient = ingredientData["ingredient"][i];
-        let amount = ingredientData["amount"][i];
-        let unit = ingredientData["unit"][i];
+        const amount = ingredientData["amount"][i];
+        const unit = ingredientData["unit"][i];
 
-        newAmount = amount * portionSize;
-
+        let newAmount = amount * portionSize;
         portion.innerHTML += `
-            <tbody>
                 <tr>
-                    <td>${newAmount}${unit} ${ingredient}</td>
+                    <td>${newAmount} ${unit} ${ingredient}</td>
                 </tr>
-            </tbody>
         `;
     }
-    console.log(newAmount);
-}
 
+}
 // include template
 async function includeHTML() {
     let includeElements = document.querySelectorAll("[w3-include-html]");
