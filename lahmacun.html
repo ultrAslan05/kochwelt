@@ -32,10 +32,10 @@
                 </div>
             </div>
             <div class="recipe-ingredients">
-                <form class="form">
+                <form class="form" onsubmit="calculator('lahmacunIngredients'); return false">
                     <label for="amount">Zutaten für</label>
                     <input class="portions-input" type="number" required id="amount" min="1" value="4" id="amount" />
-                    <input class="button submit-button" type="submit" value="Portionen"  onclick="calculator('lahmacunIngredients')"/>
+                    <input class="button submit-button" type="submit" value="Portionen" />
                 </form>
 
                 <table class="single-ingredient" id="ingredient-table">
