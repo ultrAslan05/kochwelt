@@ -9,7 +9,7 @@ body {
 }
 
 .main-container {
-    margin: 0 150px;
+    padding: 0 150px;
 }
 
 .padding-bottom-32 {
@@ -20,11 +20,14 @@ body {
     padding-left: 24px;
 }
 
+.margin-top-0 {
+    margin-top: 0;
+}
+
 /* landing page styling */
 .section {
     display: flex;
-    padding: 50px 0;
-    border: 1px solid;
+    padding: 50px 150px;
 }
 
 .landing-page-img {
@@ -38,7 +41,34 @@ body {
     justify-content: space-between;
 }
 
+.recipes-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #EFEFEF;
+}
 
+.multiple-recipes-section {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.multiple-recipes-section img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.multiple-recipes-section a {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: black;
+    font-weight: 600;
+}
 
 
 /* recipe html styling */
