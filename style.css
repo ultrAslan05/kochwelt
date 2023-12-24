@@ -8,10 +8,40 @@ body {
     cursor: pointer;
 }
 
-.recipe-container {
+.main-container {
     margin: 0 150px;
 }
 
+.padding-bottom-32 {
+    padding-bottom: 32px;
+}
+
+.padding-left-24 {
+    padding-left: 24px;
+}
+
+/* landing page styling */
+.section {
+    display: flex;
+    padding: 50px 0;
+    border: 1px solid;
+}
+
+.landing-page-img {
+    width: 400px;
+    border-radius: 10px;
+}
+
+.main-section-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+
+
+/* recipe html styling */
 .recipe-img {
     height: 200px;
     width: 100%;
