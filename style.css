@@ -71,6 +71,31 @@ body {
     font-weight: 600;
 }
 
+.info-section {
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+}
+
+.info-section h2 {
+    margin: 0;
+}
+
+.info-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.info-text {
+    padding-top: 32px;
+}
+
+.image-size {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
 
 /* recipe html styling */
 .recipe-img {
