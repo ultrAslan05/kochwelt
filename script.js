@@ -11,17 +11,22 @@ let recipes = {
 };
 
 function showIngredients(recipe) {
+    // get data for the specified recipe which is given by the html on click
     let ingredientData = recipes[recipe];
+    // get the html elements 
     let portion = document.getElementById("ingredient-table");
     let portionSize = document.getElementById("amount").value;
+    // clear previous content
     portion.innerHTML = "";
 
     for (let i = 0; i < ingredientData["ingredient"].length; i++) {
+        // get information about current ingredient
         const ingredient = ingredientData["ingredient"][i];
         const amount = ingredientData["amount"][i];
         const unit = ingredientData["unit"][i];
-
+        // calculate new amount based on portion size selected
         let newAmount = amount * portionSize;
+        // create new row in the table 
         portion.innerHTML += `
                 <tr>
                     <td>${newAmount} ${unit} ${ingredient}</td>
@@ -30,23 +35,22 @@ function showIngredients(recipe) {
     }
 }
 
-//make "rezept des tages" open a random recipe on click
+//make the link "rezept des tages" open a random recipe on click
 function randomRecipe() {
     let randomLink = document.getElementById('random');
-    let files = ['./lahmacun.html', './currybowl.html', './bulgursalat.html', './rezept4.html'];
+    let links = ['./lahmacun.html', './currybowl.html', './bulgursalat.html', './rezept4.html'];
     
-    // get the current href from localstore if href is stored there OR from the element itself
+    // get the current href from localstorage if href is stored there OR from the element itself if nothing is saved in localstorage yet
     let currentHref = localStorage.getItem('currentHref') || randomLink.getAttribute("href");
-    // loop until current href and is different than the new generated one
+    // execute loop until current href is different than the new generated one
     do {
         // create random number so it can be used for the index of the files array
-        currentIndex = Math.floor(Math.random() * files.length);
-    } while (currentHref === files[currentIndex]);
+        currentIndex = Math.floor(Math.random() * links.length);
+    } while (currentHref === links[currentIndex]);
     // set the href of the link to the new href 
-    randomLink.setAttribute("href", files[currentIndex]);
+    randomLink.setAttribute("href", links[currentIndex]);
     // save the updated href in the localStorage 
     localStorage.setItem('currentHref', randomLink.getAttribute("href"));
-
 }
 
 
