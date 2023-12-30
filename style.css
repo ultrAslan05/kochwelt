@@ -8,6 +8,10 @@ body {
     cursor: pointer;
     text-decoration: none;
 }
+.button:hover {
+    box-shadow: 0px 0px 21px -3px #000000;
+    background-color: #009a00fd;
+}
 
 .main-container {
     padding: 0 150px;
@@ -34,6 +38,12 @@ body {
 .landing-page-img {
     width: 400px;
     border-radius: 10px;
+    transition: all 0.125s ease-in-out;
+}
+
+.landing-page-img:hover {
+    transform: scale(1.03);
+    box-shadow: 1px 0px 42px 5px rgba(0,0,0,0.44);
 }
 
 .main-section-content {
@@ -61,7 +71,13 @@ body {
     object-fit: cover;
     border-radius: 10px;
 }
+.multiple-recipes-section a:hover {
+    transform: scale(1.03);
+}
+.multiple-recipes-section img:hover {
+    box-shadow: 1px -10px 42px -4px rgba(0,0,0,0.44);
 
+}
 .multiple-recipes-section a {
     text-decoration: none;
     display: flex;
@@ -69,6 +85,7 @@ body {
     align-items: center;
     color: black;
     font-weight: 600;
+    transition: all 0.125s ease-in-out;
 }
 
 .info-section {
