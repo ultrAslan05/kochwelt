@@ -8,17 +8,66 @@
         <link rel="stylesheet" href="style.css" />
         <script src="script.js"></script>
     </head>
-    <body onload="includeHTML()">
+
+    <body onload="includeHTML(), showIngredients('curryBowlIngredients')">
         <div w3-include-html="templates/header.html"></div>
-        <div>
-            <h1>curry-bowl</h1>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cupiditate praesentium vero debitis inventore corrupti. Eaque saepe enim ex, dicta voluptatibus optio magni
-            consectetur accusantium eos nulla, minus nihil. Quis, commodi. Quo animi quaerat eum ut temporibus sunt vero quisquam. Ut, sequi? Delectus, vitae quia expedita,
-            quibusdam maxime suscipit labore corporis neque facere officia modi temporibus voluptatibus, obcaecati harum. Delectus, tenetur. Aperiam alias quibusdam quam vel itaque
-            delectus suscipit, reiciendis, tempore totam perferendis magnam? Quo ex et, nesciunt architecto at fuga maiores sequi nemo quod porro pariatur ea omnis. Unde, tempore.
-            Explicabo, pariatur non! Consectetur quasi porro repellat saepe corrupti? Impedit autem unde veritatis? Vitae voluptas eum obcaecati molestias! Ea sed quis dolore
-            maiores? Labore facilis sapiente earum suscipit perferendis vitae? Maiores ullam provident fuga commodi ut cumque debitis tempora animi odio deleniti earum, inventore
-            natus vitae officia doloremque sed ad dolores vel rerum quibusdam soluta? Unde itaque deleniti et pariatur?
+        <div class="main-container">
+            <div>
+                <h1>Curry-Bowl</h1>
+            </div>
+            <div>
+                <img class="recipe-img" src="./img/curry-bowl.jpg" alt="Curry-Bowl" />
+            </div>
+            <div class="important-recipe-data">
+                <div class="recipe-info">
+                    <img class="icons" src="./icons/clock-regular.svg" alt="clock" />
+                    <span>25 min.</span>
+                </div>
+                <div class="recipe-info">
+                    <img class="icons" src="./icons/brain-solid.svg" alt="" />
+                    <span>einfach</span>
+                </div>
+                <div class="recipe-info">
+                    <img class="icons" src="./icons/calendar-alt-regular.svg" alt="" />
+                    <span>21.12.2023</span>
+                </div>
+            </div>
+            <div class="recipe-ingredients">
+                <form class="form" onsubmit="showIngredients('curryBowlIngredients'); return false">
+                    <label for="amount">Zutaten für</label>
+                    <input class="portions-input" type="number" required id="amount" min="1" value="4" id="amount" />
+                    <input class="button submit-button" type="submit" value="Portionen" />
+                </form>
+
+                <table class="single-ingredient">
+                    <tbody id="ingredient-table"></tbody>
+                </table>
+                <h3>Zubereitung</h3>
+                <div class="preparation-quick-info">
+                    <div class="recipe-info preparation-info">
+                        <img class="icons" src="./icons/clock-regular.svg" alt="" />
+                        <span>ca. 25 min.</span>
+                    </div>
+                    <div class="recipe-info">
+                        <img class="icons" src="./icons/clock-regular.svg" alt="" />
+                        <span>Gesamtzeit ca. 25 min.</span>
+                    </div>
+                </div>
+                <div class="recipe-description">
+                    1. Reis in ca. 400 ml kochendem Salzwasser nach Packungsanweisung garen. Zwiebel schälen und würfeln. <br />
+                    <br />
+                    2. Öl in einem Topf erhitzen, Zwiebel und Currypaste darin ca. 2 Minuten andünsten. Mit Kokosmilch ablöschen.
+                    <br />
+                    Gemüsemischung zugeben, aufkochen und ca. 3 Minuten bei mittlerer Hitze köcheln. Mit Salz, Pfeffer und Zitronensaft abschmecken. Mit dem Reis anrichten.
+                </div>
+                <div class="created-by-section">
+                    <h4>Rezept erstellt von</h4>
+                    <div class="recipe-created-by">
+                        <img class="profile-img" src="./img/Jens.jpg" alt="Profile Picture" />
+                        <span>Jens</span>
+                    </div>
+                </div>
+            </div>
         </div>
         <div w3-include-html="templates/footer.html"></div>
     </body>

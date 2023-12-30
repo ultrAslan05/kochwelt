@@ -1,13 +1,19 @@
 let recipes = {
-    test: {
-        ingredient: ["test"],
-        amount: ["890"],
+    curryBowlIngredients: {
+        ingredient: ['Basmatireis', 'Salz und Pfeffer', 'Zwiebel', 'ÖL', 'rote Currypaste', 'Kokosmilch', 'TK-Gemüsemischung (z.B. Asia-Mix)', 'Zitronensaft'],
+        amount: ['50', '', '0.25', '0.5', '1', '106', '125', '0.25'],
+        unit: ['g', '', '', 'EL', 'TL', 'ml', 'g', ''],
     },
-    lahmacunIngredients: {
+    lahmacunIngredientsl: {
         ingredient: ["Mehl", "Trockenhefe", "Olivenöl", "Zucker", "Salz", "Wasser", "Hackfleisch", "Zwiebel", "Tomatenmark", "Petersilie", "Knoblauch", "Tomaten", "Pfeffer"],
         amount: ["125", "0.25", "0.25", "0.25", "0.25", "0.25", "125", "0.5", "0.25", "0.5", "1", "0.5", "0.25"],
         unit: ["g", "Packung", " EL", "TL", "TL", "Tasse", "g", "ganze", "EL", "Bund", "Zehe/n", "", "TL"],
     },
+    bulgursalatIngredients: {
+        ingredient: [],
+        amount: [],
+        unit: [],
+    }
 };
 
 function showIngredients(recipe) {

@@ -274,6 +274,29 @@ tr:nth-child(odd) {
     }
 }
 
+/* impressum */
+.impressumH1 {
+    display: flex;
+    font-size: 65px;
+    text-decoration: underline #008000;
+    justify-self: center;
+    margin-bottom: 200px;
+    
+}
+
+.impressum {
+    font-size: 16px;
+}
+
+.impressumBox {
+    margin: 0 150px;
+    display: grid;
+    justify-self: flex-start;
+    align-self: center;
+    flex-direction: column;
+    margin-bottom: 200px;
+}
+
 /* header template */
 .header {
     display: flex;
