@@ -52,6 +52,7 @@ function showIngredients(recipe) {
 //make the link "rezept des tages" open a random recipe on click
 function randomRecipe() {
     let randomLink = document.getElementById("random");
+    let randomLinkDropdown = document.getElementById('randomDropdownLink');
     let links = ["./lahmacun.html", "./currybowl.html", "./bulgursalat.html", "./rezept4.html"];
 
     // get the current href from localstorage if href is stored there OR from the element itself if nothing is saved in localstorage yet
@@ -63,6 +64,7 @@ function randomRecipe() {
     } while (currentHref === links[currentIndex]);
     // set the href of the link to the new href
     randomLink.setAttribute("href", links[currentIndex]);
+    randomLinkDropdown.setAttribute("href", links[currentIndex]);
     // save the updated href in the localStorage
     localStorage.setItem("currentHref", randomLink.getAttribute("href"));
 }
@@ -81,3 +83,8 @@ async function includeHTML() {
         }
     }
 }
+
+
+function myFunction() {
+    document.getElementById("dropdown").classList.toggle("show");
+  }
