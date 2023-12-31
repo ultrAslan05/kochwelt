@@ -406,10 +406,14 @@ tr:nth-child(odd) {
     text-decoration: none;
     display: block;
 }
-
+.dropbtn:hover {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+}
 .dropdown {
     position: relative;
     display: inline-block;
+    z-index: 999;
 }
 .dropbtn img {
     width: 40px;
@@ -418,13 +422,14 @@ tr:nth-child(odd) {
 .dropbtn {
     background-color: #ffffff;
     border: none;
+    cursor: pointer;
 }
 .show {
     display:block;
 }
 
 .d-none {
-    display: none;
+    display: none ;
 }
 
 /* footer template */
@@ -432,4 +437,19 @@ tr:nth-child(odd) {
 .footer {
     height: 20vh;
     background-color: #403b3b;
+}
+
+.background-gray {
+    background-color: rgba(255, 255, 255,0.01);
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    z-index: 900;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.d-none-background {
+    display: none !important;
 }

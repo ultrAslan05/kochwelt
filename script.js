@@ -49,10 +49,12 @@ function showIngredients(recipe) {
     }
 }
 
+function checkAmount() {}
+
 //make the link "rezept des tages" open a random recipe on click
 function randomRecipe() {
     let randomLink = document.getElementById("random");
-    let randomLinkDropdown = document.getElementById('randomDropdownLink');
+    let randomLinkDropdown = document.getElementById("randomDropdownLink");
     let links = ["./lahmacun.html", "./currybowl.html", "./bulgursalat.html", "./rezept4.html"];
 
     // get the current href from localstorage if href is stored there OR from the element itself if nothing is saved in localstorage yet
@@ -84,7 +86,30 @@ async function includeHTML() {
     }
 }
 
-
-function myFunction() {
+function showDropdownMenu() {
     document.getElementById("dropdown").classList.toggle("show");
-  }
+    document.getElementById("darkBackground").classList.remove('d-none-background');
+}
+
+// function closeDropdownMenu() {
+//     document.getElementById('dropdown').classList.add('d-none');
+// }
+
+// Close the dropdown if the user clicks outside of it
+// window.onclick = function (event) {
+//     if (!event.target.matches(".drop-button") && !document.getElementById("drop-button").contains(event.target)) {
+//         var dropdowns = document.getElementsByClassName("dropdown-content");
+//         for (i = 0; i < dropdowns.length; i++) {
+//             var openDropdown = dropdowns[i];
+//             if (openDropdown.classList.contains("show")) {
+//                 openDropdown.classList.remove("show");
+//             }
+//         }
+//     }
+// };
+
+function closeMenu() {
+    document.getElementById('darkBackground').classList.add('d-none-background');
+    document.getElementById("dropdown").classList.toggle("show");
+    
+}
