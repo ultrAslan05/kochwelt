@@ -27,29 +27,33 @@ function showIngredients(recipe) {
 
     for (let i = 0; i < ingredientData["ingredient"].length; i++) {
         // get information about current ingredient
-        const ingredient = ingredientData["ingredient"][i];
-        const amount = ingredientData["amount"][i];
-        const unit = ingredientData["unit"][i];
+        let ingredient = ingredientData["ingredient"][i];
+        let amount = ingredientData["amount"][i];
+        let unit = ingredientData["unit"][i];
         // calculate new amount based on portion size selected
         let newAmount = amount * portionSize;
-        // create new row in the table
-        if (amount == "") {
-            portion.innerHTML += `
-                <tr>
-                    <td> ${unit} ${ingredient}</td>
-                </tr>
-        `;
-        } else {
-            portion.innerHTML += `
-                <tr>
-                    <td>${newAmount} ${unit} ${ingredient}</td>
-                </tr>
-        `;
-        }
+        // create html 
+        checkIfAmountIsEmpty(ingredient, unit, amount, portion, newAmount);
     }
 }
 
-function checkAmount() {}
+// check if the array amount has a value or is empty and create the proper html
+function checkIfAmountIsEmpty(ingredient, unit, amount, portion, newAmount) {
+    // create new row in the table
+    if (amount == "") {
+        portion.innerHTML += `
+            <tr>
+                <td> ${unit} ${ingredient}</td>
+            </tr>
+    `;
+    } else {
+        portion.innerHTML += `
+            <tr>
+                <td>${newAmount} ${unit} ${ingredient}</td>
+            </tr>
+    `;
+    }
+}
 
 //make the link "rezept des tages" open a random recipe on click
 function randomRecipe() {
@@ -86,30 +90,13 @@ async function includeHTML() {
     }
 }
 
+// dropdown menu
 function showDropdownMenu() {
     document.getElementById("dropdown").classList.toggle("show");
-    document.getElementById("darkBackground").classList.remove('d-none-background');
+    document.getElementById("darkBackground").classList.remove("d-none-background");
 }
 
-// function closeDropdownMenu() {
-//     document.getElementById('dropdown').classList.add('d-none');
-// }
-
-// Close the dropdown if the user clicks outside of it
-// window.onclick = function (event) {
-//     if (!event.target.matches(".drop-button") && !document.getElementById("drop-button").contains(event.target)) {
-//         var dropdowns = document.getElementsByClassName("dropdown-content");
-//         for (i = 0; i < dropdowns.length; i++) {
-//             var openDropdown = dropdowns[i];
-//             if (openDropdown.classList.contains("show")) {
-//                 openDropdown.classList.remove("show");
-//             }
-//         }
-//     }
-// };
-
 function closeMenu() {
-    document.getElementById('darkBackground').classList.add('d-none-background');
+    document.getElementById("darkBackground").classList.add("d-none-background");
     document.getElementById("dropdown").classList.toggle("show");
-    
 }
