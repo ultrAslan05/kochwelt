@@ -427,18 +427,6 @@ tr:nth-child(odd) {
 .show {
     display:block;
 }
-
-.d-none {
-    display: none ;
-}
-
-/* footer template */
-
-.footer {
-    height: 20vh;
-    background-color: #403b3b;
-}
-
 .background-gray {
     background-color: rgba(255, 255, 255,0.01);
     width: 100vw;
@@ -449,7 +437,16 @@ tr:nth-child(odd) {
     right: 0;
     bottom: 0;
 }
-
 .d-none-background {
     display: none !important;
+}
+.d-none {
+    display: none ;
+}
+
+/* footer template */
+
+.footer {
+    height: 20vh;
+    background-color: #403b3b;
 }
