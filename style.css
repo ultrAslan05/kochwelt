@@ -247,8 +247,7 @@ tr:nth-child(odd) {
         white-space: nowrap;
     }
     .header {
-        padding: 0;
-        justify-content: center !important;
+        padding: 0 24px !important;
     }
     .img-recipe {
         display: flex;
@@ -259,7 +258,7 @@ tr:nth-child(odd) {
 @media (max-width: 890px) {
     .header {
         justify-content: space-between !important;
-        padding: 0 64px !important;
+        padding: 0 64px;
     }
     .main-container {
         padding: 0 16px;
@@ -280,7 +279,7 @@ tr:nth-child(odd) {
         display: block !important;
     }
     .dropdown-content {
-        left: -70px;
+        left: -110px;
     }
 }
 
@@ -289,10 +288,9 @@ tr:nth-child(odd) {
         flex-direction: column-reverse;
         align-items: center;
     }
-    .header {
-        justify-content: center !important;
-        padding: 0 16px !important;
-    }
+    /* .header {
+        padding: 0 16px;
+    } */
     .nav-logo img {
         width: 220px;
     }
@@ -313,9 +311,6 @@ tr:nth-child(odd) {
     .nav-logo img {
         width: 220px;
     }
-    .header {
-        padding: 16px !important;
-    }
     .section {
         padding: 50px 16px;
     }
@@ -331,9 +326,14 @@ tr:nth-child(odd) {
         left: -120px;
     }
     .header img {
-        height: auto !important;
+        height: auto ;
     }
 }
+/* @media (min-width: 1051px){
+    .show {
+        display: none !important;
+    }
+} */
 
 /* impressum */
 .impressumH1 {
@@ -368,6 +368,7 @@ tr:nth-child(odd) {
 
 .header img {
     height: 100px;
+    object-fit: contain;
 }
 
 .header a {

@@ -98,5 +98,12 @@ function showDropdownMenu() {
 
 function closeMenu() {
     document.getElementById("darkBackground").classList.add("d-none-background");
-    document.getElementById("dropdown").classList.toggle("show");
+    document.getElementById("dropdown").classList.remove("show");
 }
+
+// execute the function closeMenu() when the screen is resized(891px).
+window.addEventListener('resize', e => {
+    if (window.matchMedia(`(min-width: 891px)`).matches) {
+        closeMenu();
+    }
+ });
