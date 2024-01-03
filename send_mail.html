@@ -4,14 +4,17 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Kontakt</title>
-    <link rel="stylesheet" href="fonts/fonts.css" />
-    <link rel="stylesheet" href="kontakt.css" />
+    <link rel="stylesheet" href="fonts.css" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
   </head>
-  <body>
+  <body onload="includeHTML()">
+    <div w3-include-html="templates/header.html"></div>
     <div class="afteremail">
       <h1>E-Mail ist unterwegs</h1>
       Hier geht es zurück auf unsere
       <a href="index.html"><button class="mainmenubutton">Hauptseite</button></a>
     </div>
+    <div w3-include-html="templates/footer.html"></div>
   </body>
 </html>
