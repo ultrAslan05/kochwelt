@@ -93,7 +93,7 @@ async function includeHTML() {
 // dropdown menu
 function showDropdownMenu() {
     document.getElementById("dropdown").classList.toggle("show");
-    document.getElementById("darkBackground").classList.remove("d-none-background");
+    document.getElementById("darkBackground").classList.toggle("d-none-background");
 }
 
 function closeMenu() {
