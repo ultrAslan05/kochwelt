@@ -14,6 +14,11 @@ let recipes = {
         amount: ["85", "150", "1", "1", "20", "3", "1", "4", "4", "18", "1", "1"], 
         unit: ["g", "ml", "ganze", "ganze", "g", "g", "TL", "ml", "ml", "ml", "Handvoll", "TL"],
     },
+    pfannkuchenIngredients: {
+        ingredient: ["Mehl", "Eier", "Zucker", "Milch", "Salz", "Backpulver", "Öl zum Braten"],
+        amount: ["200", "3", "1", "400", "1", "1", ""],
+        unit: ["g", "", "TL", "ml", "Prise(n)", "Msp.", ""],
+    }
 };
 
 function showIngredients(recipe) {
