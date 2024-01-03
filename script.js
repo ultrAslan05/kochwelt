@@ -9,10 +9,10 @@ let recipes = {
         amount: ["125", "0.25", "0.25", "0.25", "0.25", "0.25", "125", "0.5", "0.25", "0.5", "1", "0.5", "0.25"],
         unit: ["g", "Packung", " EL", "TL", "TL", "Tasse", "g", "ganze", "EL", "Bund", "Zehe/n", "", "TL"],
     },
-    bulgursalatIngredients: {
-        ingredient: [],
-        amount: [],
-        unit: [],
+    kisirIngredients: {
+        ingredient: ["Bulgur, feiner (köftelik)", "Wasser, kochendes", "Frühlingszwiebel(n), in dünne Ringe geschnittene", "große(r) Zwiebel(n), in kleine Würfel gehackte", "Tomatenmark", "Paprikamark, optional, kann durch weiterees Tomatenmark ersetzt werden", "Salz", "Zitronensaft", "Granatapfelsirup", "Öl", "Petersilie", "Pfeffer"],
+        amount: ["85", "150", "1", "1", "20", "3", "1", "4", "4", "18", "1", "1"], 
+        unit: ["g", "ml", "ganze", "ganze", "g", "g", "TL", "ml", "ml", "ml", "Handvoll", "TL"],
     },
 };
 
@@ -32,7 +32,7 @@ function showIngredients(recipe) {
         let unit = ingredientData["unit"][i];
         // calculate new amount based on portion size selected
         let newAmount = amount * portionSize;
-        // create html 
+        // create html
         checkIfAmountIsEmpty(ingredient, unit, amount, portion, newAmount);
     }
 }
@@ -59,7 +59,7 @@ function checkIfAmountIsEmpty(ingredient, unit, amount, portion, newAmount) {
 function randomRecipe() {
     let randomLink = document.getElementById("random");
     let randomLinkDropdown = document.getElementById("randomDropdownLink");
-    let links = ["./lahmacun.html", "./currybowl.html", "./bulgursalat.html", "./rezept4.html"];
+    let links = ["./lahmacun.html", "./currybowl.html", "./kisir.html", "./rezept4.html"];
 
     // get the current href from localstorage if href is stored there OR from the element itself if nothing is saved in localstorage yet
     let currentHref = localStorage.getItem("currentHref") || randomLink.getAttribute("href");
@@ -102,15 +102,14 @@ function closeMenu() {
 }
 
 // execute the function closeMenu() when the screen is resized(891px).
-window.addEventListener('resize', e => {
+window.addEventListener("resize", (e) => {
     if (window.matchMedia(`(min-width: 891px)`).matches) {
         closeMenu();
     }
- });
+});
 
-
-// contact js 
-function sendMail(event){﻿
+// contact js
+function sendMail(event) {
     event.preventDefault();
     const data = new FormData(event.target);
 
@@ -118,11 +117,15 @@ function sendMail(event){﻿
         method: "POST",
         body: new FormData(event.target),
         headers: {
-            'Accept': 'application/json'
-        }
+            Accept: "application/json",
+        },
     }).then(() => {
         window.location.href = "./send_mail.html";
-    }).catch((error) => {
+    })
+    .catch((error) => {
         console.log(error);
     });
 }
+
+
+
