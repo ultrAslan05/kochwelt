@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kontakt</title>
+    <link rel="stylesheet" href="fonts.css" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+  </head>
+  <body onload="includeHTML()">
+    <div w3-include-html="templates/header.html"></div>
+    <form class="contact-form" onsubmit="sendMail(event)">
+      <fieldset>
+        <div class="mediatextfield">
+          <label>
+            Name
+            <input class="namefield" type="text" name="Name" required />
+          </label>
+          <label>
+            E-Mail-Adresse
+            <input class="namefield" type="email" name="E-Mail" required />
+          </label>
+        </div>
+        <div class="textfield">
+          <label>
+            Ihre Nachricht <br>
+            <textarea rows="3" name="Nachricht" required></textarea>
+          </label>
+        </div>
+        <div>
+          <label>
+            <input
+              class="checkbox"
+              type="checkbox"
+              name="Datenverarbeitung bestätigt"
+              value="Ja"
+              required
+            />
+            Ich bestätige, dass ich mit der Verarbeitung meiner Eingaben zum
+            Zwecke der Anfragebearbeitung, einverstanden bin.
+          </label>
+        </div>
+      </fieldset>
+      <div>
+        <input type="text" name="_gotcha" value="" style="display: none" />
+        <input class="btns button" type="submit" value="Absenden" />
+      </div>
+    </form>
+    <div w3-include-html="templates/footer.html"></div>
+  </body>
+</html>

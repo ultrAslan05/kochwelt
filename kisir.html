@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Kochwelt - Kisir</title>
+        <link rel="stylesheet" href="fonts.css" />
+        <link rel="stylesheet" href="style.css" />
+        <script src="script.js"></script>
+    </head>
+    <body onload="includeHTML(), showIngredients('kisirIngredients')">
+        <div w3-include-html="templates/header.html"></div>
+        <div class="main-container">
+            <div>
+                <h1>Kisir (Bulgursalat)</h1>
+            </div>
+            <div>
+                <img class="recipe-img" src="./img/kisir.jpg" alt="Kisir" />
+            </div>
+            <div class="important-recipe-data">
+                <div class="recipe-info">
+                    <img class="icons" src="./icons/clock-regular.svg" alt="clock" />
+                    <span>15 Min.</span>
+                </div>
+                <div class="recipe-info">
+                    <img class="icons" src="./icons/brain-solid.svg" alt="" />
+                    <span>simpel</span>
+                </div>
+                <div class="recipe-info">
+                    <img class="icons" src="./icons/calendar-alt-regular.svg" alt="" />
+                    <span>23.12.2023</span>
+                </div>
+            </div>
+            <div class="recipe-ingredients">
+                <form class="form" onsubmit="showIngredients('kisirIngredients'); return false">
+                    <label for="amount">Zutaten für</label>
+                    <input class="portions-input" type="number" required id="amount" min="1" value="6" id="amount" />
+                    <input class="button submit-button" type="submit" value="Portionen" />
+                </form>
+
+                <table class="single-ingredient" >
+                    <tbody id="ingredient-table">
+
+                    </tbody>
+                </table>
+                <h3>Zubereitung</h3>
+                <div class="preparation-quick-info">
+                    <div class="recipe-info preparation-info">
+                        <img class="icons" src="./icons/clock-regular.svg" alt="">
+                        <span>ca. 40 Minuten</span>
+                    </div>
+                    <div class="recipe-info">
+                        <img class="icons" src="./icons/clock-regular.svg" alt="">
+                        <span>Gesamtzeit ca. 40 Minuten</span>
+                    </div>
+                </div>
+                <div class="recipe-description">
+                    Zuerst das Öl erhitzen und die Zwiebel darin glasig anbraten. Nicht
+                    braun werden lassen. Das Tomaten- und Paprikamark ein paar Sekunden mit
+                    anschwitzen und beiseitestellen. Wasser kochen und kochend über den
+                    Bulgur gießen. Das Ganze zusammen mit dem Salz so lange umrühren, bis
+                    der Bulgur alles aufgesogen hat. Tipp: Ich mache beim Rühren immer
+                    wieder eine Bissprobe, ob es al dente ist. Evtl. etwas weniger oder mehr
+                    Wasser nehmen. Es ist wie beim Reis - manche Bulgursorten brauchen mehr,
+                    manche Sorten weniger Wasser. Dann die Zwiebel-Öl-Tomatenmark-Mischung
+                    dazugeben und mit dem Zitronensaft und Granatapfelsirup vermengen. Tipp:
+                    Wer keinen Granatapfelsirup auftreiben kann (gibts beim türkischen
+                    Lebensmittelhändler), kann es vielleicht durch ein wenig Aceto balsamico
+                    ersetzen. Dann aber mehr Zitronensaft nehmen. Ich habe es selber so
+                    nicht ausprobiert. Übernehme daher keine Gewähr wenn's dann nicht so
+                    schmeckt wie es soll. Zum Schluss noch die Frühlingszwiebel und die
+                    Petersilie untermengen und mit Pfeffer abschmecken. Anmerkung:
+                    Normalerweise mache ich es nach Augenmaß, aber weil so viele das Rezept
+                    schon haben wollten, habe ich mir die Mühe gemacht alles nach und nach
+                    abzuwiegen. Ich würde trotzdem empfehlen, zwischendurch immer wieder zu
+                    probieren und nach eigenem Geschmack zu variieren.
+                </div>
+                <div class="created-by-section">
+                    <h4>Rezept erstellt von</h4>
+                    <div class="recipe-created-by">
+                        <img class="profile-img" src="./img/profile.png" alt="Profile Picture" />
+                        <span>Semih</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div w3-include-html="templates/footer.html"></div>
+    </body>
+</html>
