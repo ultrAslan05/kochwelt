@@ -64,7 +64,7 @@ function checkIfAmountIsEmpty(ingredient, unit, amount, portion, newAmount) {
 function randomRecipe() {
     let randomLink = document.getElementById("random");
     let randomLinkDropdown = document.getElementById("randomDropdownLink");
-    let links = ["./lahmacun.html", "./currybowl.html", "./kisir.html", "./rezept4.html"];
+    let links = ["./lahmacun.html", "./currybowl.html", "./kisir.html", "./pfannkuchen.html"];
 
     // get the current href from localstorage if href is stored there OR from the element itself if nothing is saved in localstorage yet
     let currentHref = localStorage.getItem("currentHref") || randomLink.getAttribute("href");

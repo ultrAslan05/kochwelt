@@ -3,6 +3,11 @@ body {
     font-family: "Raleway", "sans-serif";
     background-color: #ffffff;
 }
+.centerContainer {
+    width: 1440px;
+    text-align: left;
+    margin: 0px auto;
+}
 
 .button {
     cursor: pointer;
@@ -214,7 +219,6 @@ tr:nth-child(odd) {
     height: 56px;
     border-radius: 50%;
 }
-
 /* impressum */
 .impressumH1 {
     display: flex;
@@ -230,7 +234,7 @@ tr:nth-child(odd) {
 
 .impressumBox {
     margin: 0 150px;
-    display: grid;
+    display: flex;
     justify-self: flex-start;
     align-self: center;
     flex-direction: column;
@@ -328,9 +332,27 @@ tr:nth-child(odd) {
 /* footer template */
 
 .footer {
-    height: 200px;
+    height: 150px;
     background-color: #403b3b;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 150px;
 }
+.footer-links {
+    color: white;
+    text-decoration: underline;
+}
+.flex-space-between-gp16 {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+}
+.social-media-footer {
+    width: 32px;
+    height: 32px;
+}
+
 
 /* contact CSS */
 
@@ -360,7 +382,7 @@ fieldset {
     align-items: center;
     justify-content: center;
     font-size: 24px;
-    height: 80vh;
+    height: 100vh;
 }
 
 .checkbox {
@@ -376,10 +398,6 @@ textarea {
     width: 100%;
     margin-top: 16px;
 }
-
-/* .namefield {
-    margin-right: 50px;
-} */
 .mediatextfield {
     display: flex;
     gap: 32px;
@@ -404,6 +422,17 @@ textarea {
     border: 0;
     font-size: 24px;
     margin-top: 20px;
+}
+
+.emailSendContent {
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.15);
+    width: 50vw;
 }
 
 /* responsive */
@@ -472,6 +501,18 @@ textarea {
     .dropdown-content {
         left: -110px;
     }
+    .footer {
+        padding: 0 16px;
+    }
+    .impressumBox {
+        margin: 0 16px;
+    }
+    .impressumH1 {
+        font-size: 40px;
+    }
+    .impressum a {
+        line-break: anywhere;
+    }
 }
 
 @media (max-width: 530px) {
@@ -479,11 +520,14 @@ textarea {
         flex-direction: column-reverse;
         align-items: center;
     }
-    /* .header {
-        padding: 0 16px;
-    } */
     .nav-logo img {
         width: 220px;
+    }
+    .impressumH1 {
+        font-size: 24px;
+    }
+    .impressum H2 {
+        font-size: 16px;
     }
 }
 
@@ -518,6 +562,12 @@ textarea {
     }
     .header img {
         height: auto;
+    }
+    .footer {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 16px;
     }
 }
 
@@ -574,13 +624,3 @@ textarea {
     }
 }
 
-.test {
-    border: 1px solid black;
-    border-radius: 10px;
-    padding: 100px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: rgba(0, 0, 0, 0.15);
-    width: 50vw;
-}

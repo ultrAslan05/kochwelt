@@ -4,6 +4,7 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Kochwelt - Pfannkuchen</title>
+        <link rel="icon" type="image/x-icon" href="./img/logo_small.png">
         <link rel="stylesheet" href="fonts.css" />
         <link rel="stylesheet" href="style.css" />
         <script src="script.js"></script>
@@ -34,7 +35,7 @@
         <div class="recipe-ingredients">
             <form class="form" onsubmit="showIngredients('pfannkuchenIngredients'); return false">
                 <label for="amount">Zutaten für</label>
-                <input class="portions-input" type="number" required id="amount" min="1" value="4" id="amount" />
+                <input class="portions-input" type="number" required id="amount" min="1" max="10" value="4" id="amount" />
                 <input class="button submit-button" type="submit" value="Portionen" />
             </form>
 
