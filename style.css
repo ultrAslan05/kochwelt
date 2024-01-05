@@ -3,12 +3,16 @@ body {
     font-family: "Raleway", "sans-serif";
     background-color: #ffffff;
 }
+.max-width-1440 {
+    max-width: 1440px; /* Adjust as needed */
+    margin: 0 auto; /* This centers the container */
+    padding: 50px 0; /* Some padding inside the container */
+}
 .centerContainer {
     width: 1440px;
     text-align: left;
     margin: 0px auto;
 }
-
 .button {
     cursor: pointer;
     text-decoration: none;
@@ -19,7 +23,7 @@ body {
 }
 
 .main-container {
-    padding: 0 150px;
+    padding: 0 20px;
 }
 
 .padding-bottom-32 {
@@ -37,7 +41,9 @@ body {
 /* landing page styling */
 .section {
     display: flex;
-    padding: 50px 150px;
+    max-width: 1440px; /* Adjust as needed */
+    margin: 0 auto; /* This centers the container */
+    padding: 50px 0; /* Some padding inside the container */
 }
 
 .landing-page-img {
@@ -56,8 +62,14 @@ body {
     flex-direction: column;
     justify-content: space-between;
 }
+.recipeBackgroundGray {
+    background-color: #efefef;
+    width: 100%;
+}
 
 .recipes-section {
+    max-width: 1440px;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -233,7 +245,7 @@ tr:nth-child(odd) {
 }
 
 .impressumBox {
-    margin: 0 150px;
+    padding: 0 20px;
     display: flex;
     justify-self: flex-start;
     align-self: center;
@@ -243,11 +255,15 @@ tr:nth-child(odd) {
 
 /* header template */
 .header {
-    display: flex;
-    justify-content: space-between;
-    padding: 0 150px;
     box-shadow: 0 4px 8px #ebebeb;
     margin-bottom: 8px;
+}
+.innerHeader {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
 .header img {
@@ -330,16 +346,26 @@ tr:nth-child(odd) {
 }
 
 /* footer template */
+.innerFooter {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1440px;
+    width: 100%;
+}
 
 .footer {
     height: 150px;
     background-color: #403b3b;
-    display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: 0 150px;
+    justify-content: center;
+    display: flex;
+    padding: 0 16px;
 }
 .footer-links {
+    color: white;
+    text-decoration: underline;
+}
+.footer-links a {
     color: white;
     text-decoration: underline;
 }
@@ -352,7 +378,6 @@ tr:nth-child(odd) {
     width: 32px;
     height: 32px;
 }
-
 
 /* contact CSS */
 
@@ -373,7 +398,6 @@ fieldset {
     border: none;
     font-size: 24px;
     margin-top: 10px;
-
 }
 
 .contact-form {
@@ -391,7 +415,7 @@ fieldset {
 
 textarea {
     width: 100%;
-    height: 150px
+    height: 150px;
 }
 
 .textfield {
@@ -532,6 +556,10 @@ textarea {
 }
 
 @media (max-width: 450px) {
+    .innerHeader {
+        padding: 0 8px;
+    }
+
     .important-recipe-data,
     .preparation-quick-info {
         flex-direction: column;
@@ -565,6 +593,14 @@ textarea {
     }
     .footer {
         flex-direction: column;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 16px;
+    }
+    .innerFooter {
+        flex-direction: column;
+        display: flex;
         align-items: center;
         justify-content: center;
         gap: 16px;
@@ -623,4 +659,3 @@ textarea {
         flex-direction: column;
     }
 }
-

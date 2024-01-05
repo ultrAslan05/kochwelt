@@ -4,72 +4,72 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Kochwelt - Pfannkuchen</title>
-        <link rel="icon" type="image/x-icon" href="./img/logo_small.png">
+        <link rel="icon" type="image/x-icon" href="./img/logo_small.png" />
         <link rel="stylesheet" href="fonts.css" />
         <link rel="stylesheet" href="style.css" />
         <script src="script.js"></script>
     </head>
     <body onload="includeHTML(), showIngredients('pfannkuchenIngredients')">
         <div w3-include-html="templates/header.html"></div>
-        <div class="main-container">
-        <div>
-            <h1>Pfannkuchen</h1>
-        </div>
-        <div>
-            <img class="recipe-img" src="./img/pfannkuchen2.jpg" alt="Pfannkuchen" />
-        </div>
-        <div class="important-recipe-data">
-            <div class="recipe-info">
-                <img class="icons" src="./icons/clock-regular.svg" alt="clock" />
-                <span>25 Min.</span>
-            </div>
-            <div class="recipe-info">
-                <img class="icons" src="./icons/brain-solid.svg" alt="" />
-                <span>simpel</span>
-            </div>
-            <div class="recipe-info">
-                <img class="icons" src="./icons/calendar-alt-regular.svg" alt="" />
-                <span>21.12.2023</span>
-            </div>
-        </div>
-        <div class="recipe-ingredients">
-            <form class="form" onsubmit="showIngredients('pfannkuchenIngredients'); return false">
-                <label for="amount">Zutaten für</label>
-                <input class="portions-input" type="number" required id="amount" min="1" max="10" value="4" id="amount" />
-                <input class="button submit-button" type="submit" value="Portionen" />
-            </form>
+        <div class="max-width-1440">
+            <div class="main-container">
+                <div>
+                    <h1>Pfannkuchen</h1>
+                </div>
+                <div>
+                    <img class="recipe-img" src="./img/pfannkuchen2.jpg" alt="Pfannkuchen" />
+                </div>
+                <div class="important-recipe-data">
+                    <div class="recipe-info">
+                        <img class="icons" src="./icons/clock-regular.svg" alt="clock" />
+                        <span>25 Min.</span>
+                    </div>
+                    <div class="recipe-info">
+                        <img class="icons" src="./icons/brain-solid.svg" alt="" />
+                        <span>simpel</span>
+                    </div>
+                    <div class="recipe-info">
+                        <img class="icons" src="./icons/calendar-alt-regular.svg" alt="" />
+                        <span>21.12.2023</span>
+                    </div>
+                </div>
+                <div class="recipe-ingredients">
+                    <form class="form" onsubmit="showIngredients('pfannkuchenIngredients'); return false">
+                        <label for="amount">Zutaten für</label>
+                        <input class="portions-input" type="number" required id="amount" min="1" max="10" value="4" id="amount" />
+                        <input class="button submit-button" type="submit" value="Portionen" />
+                    </form>
 
-            <table class="single-ingredient">
-                <tbody id="ingredient-table"></tbody>
-            </table>
-            <h3>Zubereitung</h3>
-            <div class="preparation-quick-info">
-                <div class="recipe-info preparation-info">
-                    <img class="icons" src="./icons/clock-regular.svg" alt="" />
-                    <span>ca. 15 Minuten</span>
-                </div>
-                <div class="recipe-info">
-                    <img class="icons" src="./icons/clock-regular.svg" alt="" />
-                    <span>Gesamtzeit ca. 25min</span>
-                </div>
-            </div>
-            <div class="recipe-description">
-                Die Eier mit dem Zucker cremig aufschlagen, dann mit der Milch verrühren. Nun Salz, Mehl und Backpulver
-                dazugeben und alles zu einem glatten Teig rühren. Danach ist es von Vorteil, den Teig etwas ruhen zu
-                lassen,
-                da das Mehl noch ausquillt. Dann 1 - 2 große Schöpfkellen Teig in eine auf mittlere Hitze erhitzte,
-                beschichtete Pfanne geben. Nach ca. 2 Minuten bilden sich kleine Bläschen, dann den Pfannkuchen einmal
-                wenden und von der anderen Seite schön goldbraun ausbacken.
-            </div>
-            <div class="created-by-section">
-                <h4>Rezept erstellt von</h4>
-                <div class="recipe-created-by">
-                    <img class="profile-img" src="./img/profile/philip.jpeg" alt="Profile Picture" />
-                    <span>Philip</span>
+                    <table class="single-ingredient">
+                        <tbody id="ingredient-table"></tbody>
+                    </table>
+                    <h3>Zubereitung</h3>
+                    <div class="preparation-quick-info">
+                        <div class="recipe-info preparation-info">
+                            <img class="icons" src="./icons/clock-regular.svg" alt="" />
+                            <span>ca. 15 Minuten</span>
+                        </div>
+                        <div class="recipe-info">
+                            <img class="icons" src="./icons/clock-regular.svg" alt="" />
+                            <span>Gesamtzeit ca. 25min</span>
+                        </div>
+                    </div>
+                    <div class="recipe-description">
+                        Die Eier mit dem Zucker cremig aufschlagen, dann mit der Milch verrühren. Nun Salz, Mehl und Backpulver dazugeben und alles zu einem glatten Teig rühren.
+                        Danach ist es von Vorteil, den Teig etwas ruhen zu lassen, da das Mehl noch ausquillt. Dann 1 - 2 große Schöpfkellen Teig in eine auf mittlere Hitze
+                        erhitzte, beschichtete Pfanne geben. Nach ca. 2 Minuten bilden sich kleine Bläschen, dann den Pfannkuchen einmal wenden und von der anderen Seite schön
+                        goldbraun ausbacken.
+                    </div>
+                    <div class="created-by-section">
+                        <h4>Rezept erstellt von</h4>
+                        <div class="recipe-created-by">
+                            <img class="profile-img" src="./img/profile/philip.jpeg" alt="Profile Picture" />
+                            <span>Philip</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
         <div w3-include-html="templates/footer.html"></div>
     </body>
 </html>

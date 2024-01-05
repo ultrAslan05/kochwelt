@@ -1,25 +1,27 @@
 <div id="darkBackground" class="background-gray d-none-background" onclick="closeMenu()"></div>
 <div class="header">
-    <div class="nav-logo">
-        <a href="./index.html">
-            <img src="./img/logo.png" alt="Logo Kochwelt" />
-        </a>
-    </div>
-    <div class="nav">
-        <div class="dropdown">
-            <button id="drop-button" class="dropbtn d-none" onclick="showDropdownMenu()">
-                <img src="./icons/menu.svg" alt="Menu">
-            </button>
-            <div class="dropdown-content" id="dropdown">
-                <a href="./index.html">Start</a>
-                <a id="randomDropdownLink" onclick="randomRecipe()" href="">Rezept des Tages</a>
-                <a href="./contact.html">Kontakt</a>
-                <a href="./impressum.html">Impressum</a>
-            </div>
+    <div class="innerHeader">
+        <div class="nav-logo">
+            <a href="./index.html">
+                <img src="./img/logo.png" alt="Logo Kochwelt" />
+            </a>
         </div>
-        <a class="nav-links" href="./index.html">Start</a>
-        <a class="nav-links" id="random" onclick="randomRecipe()" href="">Rezept des Tages</a>
-        <a class="nav-links" href="contact.html">Kontakt</a>
-        <a class="nav-links" href="./impressum.html">Impressum</a>
+        <div class="nav">
+            <div class="dropdown">
+                <button id="drop-button" class="dropbtn d-none" onclick="showDropdownMenu()">
+                    <img src="./icons/menu.svg" alt="Menu">
+                </button>
+                <div class="dropdown-content" id="dropdown">
+                    <a href="./index.html">Start</a>
+                    <a id="randomDropdownLink" onclick="randomRecipe()" href="">Rezept des Tages</a>
+                    <a href="./contact.html">Kontakt</a>
+                    <a href="./impressum.html">Impressum</a>
+                </div>
+            </div>
+            <a class="nav-links" href="./index.html">Start</a>
+            <a class="nav-links" id="random" onclick="randomRecipe()" href="">Rezept des Tages</a>
+            <a class="nav-links" href="contact.html">Kontakt</a>
+            <a class="nav-links" href="./impressum.html">Impressum</a>
+        </div>
     </div>
 </div>
