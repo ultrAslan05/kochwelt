@@ -237,7 +237,7 @@ tr:nth-child(odd) {
     font-size: 65px;
     text-decoration: underline #008000;
     justify-self: center;
-    margin-bottom: 200px;
+    
 }
 
 .impressum {
@@ -558,6 +558,10 @@ textarea {
 @media (max-width: 450px) {
     .innerHeader {
         padding: 0 8px;
+    }
+
+    .emailSendContent {
+        padding: 60px;
     }
 
     .important-recipe-data,
